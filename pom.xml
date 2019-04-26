@@ -92,13 +92,13 @@
                             <tag>${project.version}</tag>
                             <fileSets>
                                 <fileSet>
-                                    <directory>${project.artifactId}-features/target/feature/</directory>
+                                    <directory>features/target/feature/</directory>
                                     <includes>
                                         <include>feature.xml</include>
                                     </includes>
                                 </fileSet>
                                 <fileSet>
-                                    <directory>${project.artifactId}-kar/target</directory>
+                                    <directory>kar/target</directory>
                                     <includes>
                                         <include>*.kar</include>
                                     </includes>
