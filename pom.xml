@@ -227,6 +227,7 @@
 
         <profile>
             <id>release-blackbelt</id>
+            <!-- Community edition does not support staging -->
             <build>
                 <plugins>
                     <plugin>
@@ -242,7 +243,7 @@
                     </plugin>
                 </plugins>
             </build>
-
+            -->
             <distributionManagement>
                 <snapshotRepository>
                     <id>blackbelt-nexus-distribution</id>
