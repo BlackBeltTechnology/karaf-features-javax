@@ -111,6 +111,7 @@
                                     <repositoryId>https://github.com/BlackBeltTechnology/karaf-features-${project.artifactId}.git</repositoryId>
                                     <description>Branch: ${env.WERCKER_GIT_BRANCH} Wercker: ${env.WERCKER_RUN_URL}</description>
                                     <releaseName>${project.version}</releaseName>
+                                    <deleteRelease>true</deleteRelease>
                                     <tag>${project.version}</tag>
                                     <fileSets>
                                         <fileSet>
