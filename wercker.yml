@@ -19,6 +19,7 @@ build:
     - wercker/maven:
       goals: clean deploy
       settings: .maven.xml
+      maven_opts: -Dgithub.draft=true -Dgithub.commitish=${WERCKER_GIT_COMMIT} -Dorg.ops4j.pax.url.mvn.settings=${WERCKER_ROOT}/.maven.xml -DuseCustomSettings=true
       profiles: ${BUILD_PROFILES}
       cache_repo: true
 
@@ -107,6 +108,7 @@ release:
     - wercker/maven:
       goals: clean deploy
       settings: .maven.xml
+      maven_opts:  -Dgithub.commitish=${WERCKER_GIT_COMMIT} -Dorg.ops4j.pax.url.mvn.settings=${WERCKER_ROOT}/.maven.xml -DuseCustomSettings=true
       profiles: ${RELEASE_PROFILES}
       cache_repo: true
 
