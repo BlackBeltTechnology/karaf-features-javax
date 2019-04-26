@@ -13,7 +13,6 @@
     <name>javax karaf KAR assembly</name>
 
     <build>
-        <finalName>${project.parent.artifactId}-kar-${project.version}.kar</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -40,16 +39,14 @@
                         </configuration>
                     </execution>
                 </executions>
-                
             </plugin>
+            
             <plugin>
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>karaf-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <inputFile>${project.build.directory}/unpacked-feature/feature.xml</inputFile>
-                    <enableGeneration>false</enableGeneration>
-                    <aggregateFeatures>true</aggregateFeatures>
+                    <featuresFile>${project.build.directory}/unpacked-feature/feature.xml</featuresFile>
                 </configuration>
             </plugin>
         </plugins>
