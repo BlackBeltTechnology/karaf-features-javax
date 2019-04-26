@@ -1,36 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<features name="karaf-feature-javax-${project.version}"
+<features name="javax-${project.version}"
     xmlns="http://karaf.apache.org/xmlns/features/v1.5.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.5.0 http://karaf.apache.org/xmlns/features/v1.5.0">
 
     <feature name="javax-cdi-api" version="1.2" description="CDI API" install="false">
-        <feature>javax-el-api</feature>
+        <feature>javax-el-api3</feature>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-interceptor_1.1_spec/1.0</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-jcdi_1.0_spec/1.0</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-atinject_1.0_spec/1.1</bundle>
         <bundle>mvn:javax.interceptor/javax.interceptor-api/1.2</bundle>
         <bundle>mvn:javax.annotation/javax.annotation-api/1.2</bundle>
         <bundle>mvn:javax.enterprise/cdi-api/1.2</bundle>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-inject/1_2</bundle>
     </feature>
     
-    <feature name="javax-servlet-api" version="3.1.0" description="Servlet API" install="false">
-        <bundle dependency="true">mvn:javax.servlet/javax.servlet-api/3.1.0</bundle>
+    <feature name="javax-servlet-api3" version="3.1.0" description="Servlet API" install="false">
+        <bundle>mvn:javax.servlet/javax.servlet-api/3.1.0</bundle>
     </feature>
     
     <feature name="jsr305" version="3.0.2" description="Google findbugs" install="false">
-        <bundle dependency="true">mvn:com.google.code.findbugs/jsr305/3.0.2</bundle>
+        <bundle>mvn:com.google.code.findbugs/jsr305/3.0.2</bundle>
+    </feature>
+
+    <feature name="javax-transaction-api" version="1.2.0">
+        <bundle>mvn:javax.interceptor/javax.interceptor-api/1.2</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-inject/1_2</bundle>
+        <feature>javax-el-api3</feature>
+        <bundle>mvn:javax.enterprise/cdi-api/1.2</bundle>
+        <bundle>mvn:javax.transaction/javax.transaction-api/1.2</bundle>
     </feature>
     
-    <feature name="javax-el-api" version="3.0.0" description="javax Expression Language API 3.0.0" install="false">
-        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.javax-el-api-3.0.0/3.0.0_1</bundle>
+    <feature name="javax-jta-api" version="1.1" description="Java transaction API" install="false">
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
+    </feature>
+    <feature name="javax-el-api2" version="2.2" description="javax Expression Language API 2.2" install="false">
+        <bundle start-level="30">mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/1.2.1</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-el_2.2_spec/1.1</bundle>
+    </feature>
+
+    <feature name="javax-el-api3" version="3.0.0" description="Expression Language API 3.0.0" install="false">
+        <!-- <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.javax-el-api-3.0.0/3.0.0_1</bundle> -->
+        <bundle>mvn:javax.el/javax.el-api/3.0.0</bundle>
     </feature>
     
-    <feature name="javax-validation-api" version="2.0.1" description="javax Validation API 2.0.1" install="false">
+    <feature name="javax-validation-api2" version="2.0.1" description="Validation API 2.0.1" install="false">
         <bundle>mvn:javax.validation/validation-api/2.0.1.Final</bundle>
     </feature>
     
-    <feature name="javax-mail-api" version="1.4.4" description="Java Sun Java Mail API 1.4" install="false">
-        <bundle>mvn:com.sun.mail/mailapi/1.5.5</bundle>
-        <bundle>mvn:com.sun.mail/smtp/1.5.5</bundle>
-        <bundle>mvn:javax.mail/mail/1.4.4</bundle>
+    <feature name="javax-mail-api" version="1.6.2" description="Sun Java Mail API 1.5" install="false">
+        <!-- <bundle>mvn:javax.mail/javax.mail-api/1.6.2</bundle> -->
+        <bundle>mvn:com.sun.mail/mailapi/1.6.2</bundle>
+        <bundle>mvn:com.sun.mail/javax.mail/1.6.2</bundle>
+        <bundle>mvn:com.sun.mail/smtp/1.6.2</bundle>
+        <bundle>mvn:com.sun.mail/imap/1.6.2</bundle>
+        <bundle>mvn:com.sun.mail/pop3/1.6.2</bundle>
+    </feature>
+    
+    <feature name="javax-jcr-api2" version="2.0.0" description="Java Content Repository API 2.0">
+        <bundle>mvn:javax.jcr/jcr/2.0</bundle>
     </feature>
 </features>

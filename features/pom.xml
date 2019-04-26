@@ -5,7 +5,7 @@
     <parent>
         <groupId>hu.blackbelt.karaf.features</groupId>
         <artifactId>javax</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.1-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
     <artifactId>javax-features</artifactId>
@@ -73,11 +73,13 @@
                             </framework>
                             <features>
                                 <feature>javax-cdi-api</feature>
-                                <feature>javax-el-api</feature>
-                                <feature>javax-validation-api</feature>
-                                <feature>javax-servlet-api</feature>
+                                <feature>javax-el-api2</feature>
+                                <feature>javax-el-api3</feature>
+                                <feature>javax-validation-api2</feature>
+                                <feature>javax-servlet-api3</feature>
                                 <feature>javax-mail-api</feature>
                                 <feature>jsr305</feature>
+                                <feature>javax-jcr-api2</feature>
                             </features>
                         </configuration>
                     </execution>
