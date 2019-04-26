@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="karaf-feature-javax-${project.version}"
+    xmlns="http://karaf.apache.org/xmlns/features/v1.5.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.5.0 http://karaf.apache.org/xmlns/features/v1.5.0">
+
+    <feature name="javax-cdi-api" version="1.2" description="CDI API" install="false">
+        <feature>javax-el-api</feature>
+        <bundle>mvn:javax.interceptor/javax.interceptor-api/1.2</bundle>
+        <bundle>mvn:javax.annotation/javax.annotation-api/1.2</bundle>
+        <bundle>mvn:javax.enterprise/cdi-api/1.2</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-inject/1_2</bundle>
+    </feature>
+    
+    <feature name="javax-servlet-api" version="3.1.0" description="Servlet API" install="false">
+        <bundle dependency="true">mvn:javax.servlet/javax.servlet-api/3.1.0</bundle>
+    </feature>
+    
+    <feature name="jsr305" version="3.0.2" description="Google findbugs" install="false">
+        <bundle dependency="true">mvn:com.google.code.findbugs/jsr305/3.0.2</bundle>
+    </feature>
+    
+    <feature name="javax-el-api" version="3.0.0" description="javax Expression Language API 3.0.0" install="false">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.javax-el-api-3.0.0/3.0.0_1</bundle>
+    </feature>
+    
+    <feature name="javax-validation-api" version="2.0.1" description="javax Validation API 2.0.1" install="false">
+        <bundle>mvn:javax.validation/validation-api/2.0.1.Final</bundle>
+    </feature>
+    
+    <feature name="javax-mail-api" version="1.4.4" description="Java Sun Java Mail API 1.4" install="false">
+        <bundle>mvn:com.sun.mail/mailapi/1.5.5</bundle>
+        <bundle>mvn:com.sun.mail/smtp/1.5.5</bundle>
+        <bundle>mvn:javax.mail/mail/1.4.4</bundle>
+    </feature>
+</features>

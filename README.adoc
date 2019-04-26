@@ -1,0 +1,12 @@
+# Karaf fearture javax
+
+Externsion to karaf which adds javax specification bundles to karaf features.
+
+## Features:
+
+- javax-servlet-api 3.1
+- javax-mail-api 1.4.4
+- jsr305  3.0.2
+- cdi-api 1.2
+- el-api 3.0.0
+- validation-api 2.0.1
