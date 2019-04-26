@@ -17,11 +17,6 @@ build:
       cache_repo: true
 
     - wercker/maven:
-      goals: tycho-versions:update-eclipse-metadata
-      cache_repo: true
-      settings: .maven.xml
-
-    - wercker/maven:
       goals: clean deploy
       settings: .maven.xml
       profiles: ${BUILD_PROFILES}
@@ -108,11 +103,6 @@ release:
       maven_opts: -DnewVersion=${VERSION_FROM_POM_BASE_VERSION} -DgenerateBackupPoms=false
       settings: .maven.xml
       cache_repo: true
-
-    - wercker/maven:
-      goals: tycho-versions:update-eclipse-metadata
-      cache_repo: true
-      settings: .maven.xml
 
     - wercker/maven:
       goals: clean deploy
