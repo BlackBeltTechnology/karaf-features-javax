@@ -236,7 +236,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>blackbelt-nexus-distribution</serverId>
-                            <nexusUrl>https://nexus.blackbelt.cloud/repository/maven-judo-snapshot</nexusUrl>
+                            <nexusUrl>https://nexus.blackbelt.cloud/repository/maven-judo-snapshot/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
