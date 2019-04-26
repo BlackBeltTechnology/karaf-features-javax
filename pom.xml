@@ -8,10 +8,6 @@
     <artifactId>javax</artifactId>
     <name>javax karaf feature project</name>
     <packaging>pom</packaging>
-    <modules>
-        <module>features</module>
-        <module>kar</module>
-    </modules>
 
     <properties>
         <karaf-version>4.2.5</karaf-version>
@@ -91,6 +87,19 @@
     </build>
     
     <profiles>
+        <profile>
+            <activation>
+                <property>
+                    <name>github_release</name>
+                    <value>!true</value>
+                </property>
+            </activation>
+            <modules>
+                <module>features</module>
+                <module>kar</module>
+            </modules>
+        </profile>
+        
         <profile>
             <id>release-github</id>
             <build>
