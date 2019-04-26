@@ -227,7 +227,7 @@
 
         <profile>
             <id>release-blackbelt</id>
-            <!-- Community edition does not support staging -->
+            <!-- Community edition does not support staging
             <build>
                 <plugins>
                     <plugin>
