@@ -29,7 +29,7 @@ build:
     - wercker/maven:
       goals: deploy
       settings: .maven.xml
-      maven_opts: -pl !features,!kar -Dgithub.prerelease=true -Dgithub.commitish=${WERCKER_GIT_COMMIT}
+      maven_opts: -pl \!features,\!kar -Dgithub.prerelease=true -Dgithub.commitish=${WERCKER_GIT_COMMIT}
       profiles: ${RELEASE_GITHUB_PROFILES}
       cache_repo: true
 
@@ -125,7 +125,7 @@ release:
     - wercker/maven:
       goals: deploy
       settings: .maven.xml
-      maven_opts: -pl !features,!kar -DdeployOnly -Dgithub.prerelease=true -Dgithub.commitish=${WERCKER_GIT_COMMIT}
+      maven_opts: -pl \!features,\!kar -DdeployOnly -Dgithub.prerelease=true -Dgithub.commitish=${WERCKER_GIT_COMMIT}
       profiles: ${RELEASE_GITHUB_PROFILES}
       cache_repo: true
 
