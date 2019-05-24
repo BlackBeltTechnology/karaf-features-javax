@@ -80,6 +80,7 @@
                                 <feature>javax-mail-api</feature>
                                 <feature>jsr305</feature>
                                 <feature>javax-jcr-api2</feature>
+                                <feature>javax-json-api</feature>
                             </features>
                         </configuration>
                     </execution>

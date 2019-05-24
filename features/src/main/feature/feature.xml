@@ -60,4 +60,8 @@
     <feature name="javax-jcr-api2" version="2.0.0" description="Java Content Repository API 2.0">
         <bundle>mvn:javax.jcr/jcr/2.0</bundle>
     </feature>
+    
+    <feature name="javax-json-api" version="1.1.4" description="JSON API (JSR 374)">
+        <bundle>mvn:org.glassfish/javax.json/1.1.4</bundle>
+    </feature>
 </features>
