@@ -5,7 +5,7 @@
     <parent>
         <groupId>hu.blackbelt.karaf.features</groupId>
         <artifactId>javax</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <relativePath>../</relativePath>
     </parent>
     <artifactId>javax-features</artifactId>
@@ -80,6 +80,7 @@
                                 <feature>javax-mail-api</feature>
                                 <feature>jsr305</feature>
                                 <feature>javax-jcr-api2</feature>
+                                <feature>javax-json-api</feature>
                             </features>
                         </configuration>
                     </execution>
