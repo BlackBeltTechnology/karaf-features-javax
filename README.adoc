@@ -1,4 +1,6 @@
-# Karaf fearture javax
+# Karaf feature javax
+
+WARNING: *DEPRECATED. KARAF OWN FEATURES IS USED TO RESOLVE FEATURES.
 
 Externsion to karaf which adds javax specification bundles to karaf features.
 
@@ -13,3 +15,4 @@ Externsion to karaf which adds javax specification bundles to karaf features.
 - javax-validation-api2 2.0.1
 - javax-jcr-api2 2.0.0
 - javax-jta-api 1.1
+
